@@ -4,291 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fathima Diya | Cybersecurity Portfolio</title>
-
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
 <style>
-/* ---- General ---- */
 body {
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     font-family: 'Share Tech Mono', monospace;
-    background: #0d0d0d;
-    color: #00f0ff;
-    overflow-x: hidden;
+    background:#0d0d0d;
+    color:#00f0ff;
+    text-align:center;
 }
-a { color: #00f0ff; text-decoration: none; }
-a:hover { color: #ff00ff; }
-h1,h2,h3 { color: #00f0ff; margin:0 0 10px 0; }
-section { padding: 80px 20px; max-width: 900px; margin:auto; opacity:1; position: relative; z-index: 1; color: #00ffff; text-shadow: 0 0 5px #00f0ff; }
-header { position: relative; z-index:1; text-align:center; padding:80px 20px; color: #00ffff; text-shadow: 0 0 5px #00f0ff; }
-
-/* ---- Canvas for code rain ---- */
-#codeRain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    background: #0d0d0d;
-}
-
-/* ---- Header ---- */
+a { color:#00f0ff; text-decoration:none; }
+a:hover { color:#ff00ff; }
+header { padding:50px 20px; }
 .profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 3px solid #00f0ff;
-    object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px #00f0ff;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:2px solid #00f0ff;
+    object-fit:cover;
+    margin-bottom:20px;
 }
-.typing { font-weight: bold; }
-
-/* ---- Skill Bars ---- */
-.skill { margin-bottom: 20px; }
-.skill p { margin: 0 0 5px 0; }
-.skill-bar {
-    width: 100%;
-    height: 20px;
-    background: #111;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px #00f0ff inset;
-}
-.skill-progress {
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90deg, #00f0ff, #ff00ff);
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00f0ff;
-    transition: width 1.5s ease, box-shadow 1.5s ease;
-}
-.skill-progress.glow {
-    box-shadow: 0 0 20px #ff00ff, 0 0 15px #00ffff;
-}
-
-/* ---- Projects ---- */
-.project {
-    background: #111;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid #00f0ff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00f0ff;
-    transition: all 0.5s ease;
-    opacity: 0; /* initially invisible */
-    transform: translateY(50px); /* slide up effect */
-}
-.project.visible {
-    opacity: 1;
-    transform: translateY(0);
-    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
-}
-.project h3 { color: #00f0ff; }
-.project p { color: #a0f0ff; }
-
-/* ---- Buttons ---- */
+section { max-width:800px; margin:40px auto; text-align:left; }
+h1,h2 { margin-bottom:10px; }
+ul { padding-left:20px; }
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #00f0ff;
-    color: #000;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    font-weight: bold;
-    box-shadow: 0 0 10px #00f0ff;
-    transition: all 0.3s;
-    animation: pulse 2s infinite;
+    display:inline-block;
+    padding:10px 20px;
+    background:#00f0ff;
+    color:#000;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:10px;
 }
-.btn:hover { background: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
-@keyframes pulse {
-    0% { box-shadow: 0 0 10px #00f0ff; }
-    50% { box-shadow: 0 0 20px #ff00ff; }
-    100% { box-shadow: 0 0 10px #00f0ff; }
-}
-
-/* ---- Floating Terminal ---- */
-#terminal {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    width: 280px;
-    height: 200px;
-    background: #000;
-    border: 2px solid #00ff00;
-    padding: 10px;
-    font-family: 'Share Tech Mono', monospace;
-    color: #00ff00;
-    font-size: 14px;
-    overflow: hidden;
-    z-index: 100;
-    box-shadow: 0 0 20px #00ff00;
-    border-radius: 5px;
-}
-
-/* ---- Responsive ---- */
+.btn:hover { background:#ff00ff; color:#000; }
 @media (max-width:600px) {
-    .profile-img { width: 120px; height:120px; }
-    #terminal { display:none; } /* hide terminal on small screens */
+    .profile-img { width:120px; height:120px; }
 }
 </style>
 </head>
-
 <body>
-<canvas id="codeRain"></canvas>
 
 <header>
-    <img src="Diya_photograph.jpg" alt="Fathima Diya" class="profile-img">
-    <h1>Hi, I’m <span class="typing"></span></h1>
-    <p>Cybersecurity Enthusiast | CompTIA Security+, CySA+</p>
+    <img src="profile.jpg" alt="Fathima Diya" class="profile-img">
+    <h1>Fathima Diya Pattani Shaik</h1>
+    <p>Cybersecurity Graduate | CompTIA Security+, CySA+</p>
 </header>
-
-<!-- Floating Terminal -->
-<div id="terminal">
-    <pre id="terminalText"></pre>
-</div>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>I am a recent graduate in Cybersecurity with a strong foundation in IoT & Machine Intelligence, complemented by a BCA degree. Passionate about securing digital infrastructures, detecting vulnerabilities, and implementing effective mitigation strategies. I enjoy hands-on projects, solving security challenges, and exploring new technologies.</p>
+    <p>Honours Cybersecurity Graduate with hands-on experience in network defense, vulnerability management, and threat detection. Skilled in Kali Linux, OpenVAS, Burp Suite, Wireshark, Splunk, Active Directory, SIEM, and incident response. Passionate about securing systems and contributing to organizational cybersecurity.</p>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill"><p>Networking & Security</p><div class="skill-bar"><div class="skill-progress"></div></div></div>
-    <div class="skill"><p>Firewalls & SIEM</p><div class="skill-bar"><div class="skill-progress"></div></div></div>
-    <div class="skill"><p>Tools & Frameworks</p><div class="skill-bar"><div class="skill-progress"></div></div></div>
-    <div class="skill"><p>Systems & Cloud</p><div class="skill-bar"><div class="skill-progress"></div></div></div>
-    <div class="skill"><p>Programming & Scripting</p><div class="skill-bar"><div class="skill-progress"></div></div></div>
-    <div class="skill"><p>Documentation & Reporting</p><div class="skill-bar"><div class="skill-progress"></div></div></div>
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Networking & Security: TCP/IP, DNS, DHCP, VPN, VLAN, TLS/SSL, SNMP; Palo Alto (6 months hands-on), pfSense; Wazuh SIEM</li>
+        <li>Systems & Cloud: Active Directory, Group Policies, VMware/VirtualBox; AWS, Azure, Office 365; Windows/Linux administration</li>
+        <li>Development & Documentation: Python, Java, JavaScript, PowerShell; Technical documentation (Word, Excel, Visio)</li>
+    </ul>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
-    <div class="project"><h3>LAMP Security Server</h3><p>Configured & hardened a Linux web server to prevent common vulnerabilities.</p></div>
-    <div class="project"><h3>Firewall Deployment</h3><p>Built & optimized custom firewall rules using Palo Alto and pfSense.</p></div>
-    <div class="project"><h3>Vulnerability Assessment</h3><p>Identified & mitigated network weaknesses using Nmap and OpenVAS.</p></div>
+    <ul>
+        <li><strong>Network Vulnerability Assessment (OpenVAS):</strong> Scanned simulated enterprise network, assessed risk levels, and proposed remediation strategies aligned with NIST standards.</li>
+        <li><strong>Web Application Security Testing (OWASP Juice Shop):</strong> Conducted penetration testing for OWASP Top 10 vulnerabilities and implemented mitigation strategies.</li>
+        <li><strong>Log Analysis & Threat Detection (Splunk):</strong> Configured dashboards and alerts to detect suspicious activity and unauthorized access.</li>
+        <li><strong>File Integrity Monitoring (Python):</strong> Developed a SHA-256 based File Integrity Checker with automated alerts for unauthorized changes.</li>
+        <li><strong>Active Directory Security Lab:</strong> Built AD environment with Group Policies, password rules, and least-privilege access controls.</li>
+        <li><strong>Honeypot Deployment:</strong> Deployed Cowrie honeypot to monitor attacker behavior and log intrusion attempts.</li>
+    </ul>
 </section>
 
 <section id="contact">
-    <h2>Contact Me & Resume</h2>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/fathima-diya-pattani-shaik-aaa946212" target="_blank">linkedin.com/in/fathima-diya-pattani-shaik</a></p>
-    <p>GitHub: <a href="https://github.com/fathimadiya5" target="_blank">github.com/fathimadiya5</a></p>
+    <h2>Contact & Resume</h2>
     <p>Email: <a href="mailto:fathimadiya481@gmail.com">fathimadiya481@gmail.com</a></p>
-    <a href="Fathimashc.docx" class="btn" download>Download Resume</a>
+    <a href="resfathidd.docx" class="btn" download>Download Resume</a>
 </section>
-
-<!-- ScrollReveal JS -->
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-ScrollReveal().reveal('header', { duration:1200, origin:'top', distance:'50px' });
-ScrollReveal().reveal('#about', { duration:1200, origin:'left', distance:'50px', delay:200 });
-ScrollReveal().reveal('#projects .project', { duration:1200, origin:'bottom', distance:'50px', interval:200 });
-ScrollReveal().reveal('#contact', { duration:1200, origin:'top', distance:'50px', delay:200 });
-</script>
-
-<!-- Typing Effect -->
-<script>
-let i=0;
-const text = "Cybersecurity Enthusiast";
-const typingSpan = document.querySelector(".typing");
-function type() {
-    if(i < text.length) {
-        typingSpan.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 100);
-    }
-}
-type();
-</script>
-
-<!-- Skill Bars Animation (Full + Glow) -->
-<script>
-const skills = document.querySelectorAll('.skill-progress');
-function animateSkills() {
-    skills.forEach((skill,index)=>{
-        setTimeout(()=>{
-            skill.style.width="100%";
-            skill.classList.add('glow');
-        }, index*300);
-    });
-}
-window.addEventListener('scroll',()=>{
-    const skillsSection=document.getElementById('skills');
-    const sectionPos=skillsSection.getBoundingClientRect().top;
-    const screenPos=window.innerHeight/1.2;
-    if(sectionPos<screenPos) animateSkills();
-});
-window.addEventListener('load',animateSkills);
-</script>
-
-<!-- Projects Animation -->
-<script>
-const projects=document.querySelectorAll('.project');
-function revealProjects() {
-    projects.forEach(project=>{
-        const top=project.getBoundingClientRect().top;
-        const screenHeight=window.innerHeight/1.2;
-        if(top<screenHeight) project.classList.add('visible');
-    });
-}
-window.addEventListener('scroll',revealProjects);
-window.addEventListener('load',revealProjects);
-</script>
-
-<!-- Matrix Code Rain -->
-<script>
-const canvas=document.getElementById('codeRain');
-const ctx=canvas.getContext('2d');
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-const letters='01ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-const fontSize=16;
-const columns=canvas.width/fontSize;
-const drops=[];
-for(let x=0;x<columns;x++) drops[x]=1;
-function draw(){
-    ctx.fillStyle='rgba(13,13,13,0.1)';
-    ctx.fillRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle='#00ff00';
-    ctx.font=fontSize+'px monospace';
-    for(let i=0;i<drops.length;i++){
-        const text=letters.charAt(Math.floor(Math.random()*letters.length));
-        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
-        if(drops[i]*fontSize>canvas.height && Math.random()>0.975) drops[i]=0;
-        drops[i]++;
-    }
-}
-setInterval(draw,50);
-window.addEventListener('resize',()=>{
-    canvas.width=window.innerWidth;
-    canvas.height=window.innerHeight;
-});
-</script>
-
-<!-- Terminal Animation -->
-<script>
-const terminalText = document.getElementById('terminalText');
-const commands = [
-    "> scanning network...",
-    "> bypassing firewall...",
-    "> compiling CV...",
-    "> deploying cyber skills...",
-    "> accessing GitHub...",
-    "> checking LinkedIn profile..."
-];
-let cmdIndex = 0;
-function updateTerminal() {
-    terminalText.textContent = commands[cmdIndex];
-    cmdIndex = (cmdIndex + 1) % commands.length;
-}
-setInterval(updateTerminal, 2000);
-updateTerminal();
-</script>
 
 </body>
 </html>
