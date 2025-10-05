@@ -12,77 +12,23 @@ body {
     font-family: 'Share Tech Mono', monospace;
     background:#0d0d0d;
     color:#00f0ff;
-    text-align:center;
+    scroll-behavior: smooth;
 }
 a { color:#00f0ff; text-decoration:none; }
 a:hover { color:#ff00ff; }
-header { padding:50px 20px; }
+header {
+    text-align:center;
+    padding:60px 20px;
+    position: relative;
+}
 .profile-img {
     width:150px;
     height:150px;
     border-radius:50%;
-    border:2px solid #00f0ff;
+    border:3px solid #00f0ff;
     object-fit:cover;
     margin-bottom:20px;
+    box-shadow:0 0 15px #00f0ff;
 }
-section { max-width:800px; margin:40px auto; text-align:left; }
-h1,h2 { margin-bottom:10px; }
-ul { padding-left:20px; }
-.btn {
-    display:inline-block;
-    padding:10px 20px;
-    background:#00f0ff;
-    color:#000;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-top:10px;
-}
-.btn:hover { background:#ff00ff; color:#000; }
-@media (max-width:600px) {
-    .profile-img { width:120px; height:120px; }
-}
-</style>
-</head>
-<body>
-
-<header>
-    <img src="profile.jpg" alt="Fathima Diya" class="profile-img">
-    <h1>Fathima Diya Pattani Shaik</h1>
-    <p>Cybersecurity Graduate | CompTIA Security+, CySA+</p>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>Honours Cybersecurity Graduate with hands-on experience in network defense, vulnerability management, and threat detection. Skilled in Kali Linux, OpenVAS, Burp Suite, Wireshark, Splunk, Active Directory, SIEM, and incident response. Passionate about securing systems and contributing to organizational cybersecurity.</p>
-</section>
-
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Networking & Security: TCP/IP, DNS, DHCP, VPN, VLAN, TLS/SSL, SNMP; Palo Alto (6 months hands-on), pfSense; Wazuh SIEM</li>
-        <li>Systems & Cloud: Active Directory, Group Policies, VMware/VirtualBox; AWS, Azure, Office 365; Windows/Linux administration</li>
-        <li>Development & Documentation: Python, Java, JavaScript, PowerShell; Technical documentation (Word, Excel, Visio)</li>
-    </ul>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li><strong>Network Vulnerability Assessment (OpenVAS):</strong> Scanned simulated enterprise network, assessed risk levels, and proposed remediation strategies aligned with NIST standards.</li>
-        <li><strong>Web Application Security Testing (OWASP Juice Shop):</strong> Conducted penetration testing for OWASP Top 10 vulnerabilities and implemented mitigation strategies.</li>
-        <li><strong>Log Analysis & Threat Detection (Splunk):</strong> Configured dashboards and alerts to detect suspicious activity and unauthorized access.</li>
-        <li><strong>File Integrity Monitoring (Python):</strong> Developed a SHA-256 based File Integrity Checker with automated alerts for unauthorized changes.</li>
-        <li><strong>Active Directory Security Lab:</strong> Built AD environment with Group Policies, password rules, and least-privilege access controls.</li>
-        <li><strong>Honeypot Deployment:</strong> Deployed Cowrie honeypot to monitor attacker behavior and log intrusion attempts.</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact & Resume</h2>
-    <p>Email: <a href="mailto:fathimadiya481@gmail.com">fathimadiya481@gmail.com</a></p>
-    <a href="resfathidd.docx" class="btn" download>Download Resume</a>
-</section>
-
-</body>
-</html>
+h1 { font-size:2rem; margin-bottom:10px; }
+.typing { font-weight
