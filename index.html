@@ -4,31 +4,180 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fathima Diya | Cybersecurity Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
+/* ---- General ---- */
 body {
     margin:0;
     padding:0;
-    font-family: 'Share Tech Mono', monospace;
-    background:#0d0d0d;
-    color:#00f0ff;
+    font-family: 'Roboto', sans-serif;
+    background:#f5f8ff;
+    color:#0a3d62;
     scroll-behavior: smooth;
 }
-a { color:#00f0ff; text-decoration:none; }
-a:hover { color:#ff00ff; }
+a { color:#1e90ff; text-decoration:none; }
+a:hover { color:#0a3d62; }
+
+/* ---- Header ---- */
 header {
     text-align:center;
-    padding:60px 20px;
-    position: relative;
+    padding:80px 20px;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 .profile-img {
     width:150px;
     height:150px;
     border-radius:50%;
-    border:3px solid #00f0ff;
     object-fit:cover;
     margin-bottom:20px;
-    box-shadow:0 0 15px #00f0ff;
+    border:3px solid #1e90ff;
 }
-h1 { font-size:2rem; margin-bottom:10px; }
-.typing { font-weight
+h1 { font-size:2.2rem; margin-bottom:10px; }
+.typing { font-weight:bold; color:#1e90ff; font-size:1.1rem; }
+
+/* ---- Sections ---- */
+section {
+    max-width:900px;
+    margin:80px auto;
+    padding:20px;
+    opacity:0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+section.visible {
+    opacity:1;
+    transform: translateY(0);
+}
+h2 { margin-bottom:20px; color:#1e90ff; border-bottom:2px solid #1e90ff; display:inline-block; padding-bottom:5px; }
+
+/* ---- Lists ---- */
+ul { padding-left:20px; }
+li { margin-bottom:12px; }
+
+/* ---- Cards for Projects ---- */
+.project-card {
+    background:#ffffff;
+    border-left:4px solid #1e90ff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ---- Buttons ---- */
+.btn {
+    display:inline-block;
+    padding:10px 20px;
+    background:#1e90ff;
+    color:#ffffff;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:15px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+    background:#0a3d62;
+    transform: translateY(-3px);
+}
+
+/* ---- Responsive ---- */
+@media(max-width:600px){
+    .profile-img { width:120px; height:120px; }
+    h1 { font-size:1.7rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="Diya_photograph.jpg" alt="Fathima Diya" class="profile-img">
+    <h1>Fathima Diya Pattani Shaik</h1>
+    <p class="typing"></p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Honours Cybersecurity Graduate with hands-on experience in network defense, vulnerability management, and threat detection. Skilled in Kali Linux, OpenVAS, Burp Suite, Wireshark, Splunk, Active Directory, SIEM, and incident response. Passionate about securing systems and contributing to organizational cybersecurity.</p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+        <li><strong>Networking & Security:</strong> TCP/IP, DNS, DHCP, VPN, VLAN, TLS/SSL, SNMP; Palo Alto (6 months), pfSense; Wazuh SIEM</li>
+        <li><strong>Systems & Cloud:</strong> Active Directory, Group Policies, VMware/VirtualBox; AWS, Azure, Office 365; Windows/Linux administration</li>
+        <li><strong>Development & Documentation:</strong> Python, Java, JavaScript, PowerShell; Technical documentation (Word, Excel, Visio)</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>Network Vulnerability Assessment (OpenVAS)</h3>
+        <p>Scanned enterprise network, assessed risks, and proposed remediation strategies aligned with NIST standards.</p>
+    </div>
+    <div class="project-card">
+        <h3>Web Application Security Testing (OWASP Juice Shop)</h3>
+        <p>Penetration testing for OWASP Top 10 vulnerabilities and mitigation strategies.</p>
+    </div>
+    <div class="project-card">
+        <h3>Log Analysis & Threat Detection (Splunk)</h3>
+        <p>Configured dashboards and alerts to detect suspicious activity.</p>
+    </div>
+    <div class="project-card">
+        <h3>File Integrity Monitoring (Python)</h3>
+        <p>Developed SHA-256 based File Integrity Checker with automated alerts.</p>
+    </div>
+    <div class="project-card">
+        <h3>Active Directory Security Lab</h3>
+        <p>Built AD environment with Group Policies, password rules, and least-privilege access.</p>
+    </div>
+    <div class="project-card">
+        <h3>Honeypot Deployment</h3>
+        <p>Deployed Cowrie honeypot to monitor attacker behavior and log intrusion attempts.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact & Resume</h2>
+    <p>Email: <a href="mailto:fathimadiya481@gmail.com">fathimadiya481@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/fathima-diya-pattani-shaik-aaa946212" target="_blank">linkedin.com/in/fathima-diya-pattani-shaik</a></p>
+    <a href="resfathidd.docx" class="btn" download>Download Resume</a>
+</section>
+
+<script>
+// Typing Effect
+const text = "Cybersecurity Graduate | CompTIA Security+, CySA+";
+const typingEl = document.querySelector(".typing");
+let i = 0;
+function typeEffect() {
+    if(i < text.length){
+        typingEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+    }
+}
+typeEffect();
+
+// Scroll Reveal Sections
+const sections = document.querySelectorAll("section");
+function revealSections(){
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add("visible");
+        }
+    });
+}
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
+</script>
+
+</body>
+</html>
