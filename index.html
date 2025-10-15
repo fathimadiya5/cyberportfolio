@@ -54,7 +54,7 @@ h2 { margin-bottom:10px; color:#1e90ff; border-bottom:2px solid #1e90ff; display
 ul { padding-left:18px; margin:5px 0; }
 li { margin-bottom:6px; line-height:1.4; }
 
-/* Cards */
+/* Projects Cards */
 .project-card {
     background:#ffffff;
     border-left:3px solid #1e90ff;
@@ -70,6 +70,23 @@ li { margin-bottom:6px; line-height:1.4; }
 }
 .project-card h3 { margin:5px 0; font-size:1.1rem; }
 .project-card p, .project-card ul { margin:3px 0; font-size:0.95rem; }
+
+/* Experience Cards */
+.experience-card {
+    background:#ffffff;
+    border-left:3px solid #28a745; /* Green border for Experience */
+    padding:12px 15px;
+    margin-bottom:10px;
+    border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-card:hover {
+    transform: translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+.experience-card h3 { margin:5px 0; font-size:1.1rem; }
+.experience-card p, .experience-card ul { margin:3px 0; font-size:0.95rem; }
 
 /* Buttons */
 .btn {
@@ -120,7 +137,7 @@ li { margin-bottom:6px; line-height:1.4; }
 
 <section id="experience">
     <h2>Experience</h2>
-    <div class="project-card">
+    <div class="experience-card">
         <h3>Cybersecurity Intern | Cloudex369 IT Solutions Pvt. Ltd | Calicut, Kerala | May 2025 – Oct 2025</h3>
         <ul>
             <li>Assisted the development team remotely in securing web and mobile applications by applying security controls and promoting secure coding practices.</li>
