@@ -54,8 +54,8 @@ h2 { margin-bottom:10px; color:#1e90ff; border-bottom:2px solid #1e90ff; display
 ul { padding-left:18px; margin:5px 0; }
 li { margin-bottom:6px; line-height:1.4; }
 
-/* Projects Cards */
-.project-card {
+/* Cards */
+.project-card, .experience-card, .education-card {
     background:#ffffff;
     border-left:3px solid #1e90ff;
     padding:12px 15px;
@@ -64,29 +64,12 @@ li { margin-bottom:6px; line-height:1.4; }
     box-shadow:0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.project-card:hover {
+.project-card:hover, .experience-card:hover, .education-card:hover {
     transform: translateY(-2px);
     box-shadow:0 5px 12px rgba(0,0,0,0.1);
 }
-.project-card h3 { margin:5px 0; font-size:1.1rem; }
-.project-card p, .project-card ul { margin:3px 0; font-size:0.95rem; }
-
-/* Experience Cards */
-.experience-card {
-    background:#ffffff;
-    border-left:3px solid #28a745; /* Green border for Experience */
-    padding:12px 15px;
-    margin-bottom:10px;
-    border-radius:6px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.experience-card:hover {
-    transform: translateY(-2px);
-    box-shadow:0 5px 12px rgba(0,0,0,0.1);
-}
-.experience-card h3 { margin:5px 0; font-size:1.1rem; }
-.experience-card p, .experience-card ul { margin:3px 0; font-size:0.95rem; }
+.project-card h3, .experience-card h3, .education-card h3 { margin:5px 0; font-size:1.1rem; }
+.project-card p, .experience-card ul, .education-card p, .education-card ul { margin:3px 0; font-size:0.95rem; }
 
 /* Buttons */
 .btn {
@@ -123,7 +106,23 @@ li { margin-bottom:6px; line-height:1.4; }
 
 <section id="about">
     <h2>About Me</h2>
-    <p>Honours Cybersecurity Graduate with hands-on experience in network defense, vulnerability management, and threat detection. Skilled in Kali Linux, OpenVAS, Burp Suite, Wireshark, Splunk, Active Directory, SIEM, and incident response. Passionate about securing systems and contributing to organizational cybersecurity.</p>
+    <p>Honours Cybersecurity Graduate with a strong foundation in network defense, vulnerability management, and threat detection. Skilled in Kali Linux, OpenVAS, Burp Suite, Wireshark, Splunk, Active Directory, SIEM, and incident response. Passionate about leveraging technical skills and analytical thinking to enhance system security and contribute effectively to an organization’s cybersecurity posture.</p>
+</section>
+
+<section id="education">
+    <h2>Educational Qualifications</h2>
+    <div class="education-card">
+        <h3>PGDM In Cybersecurity | Georgian College, Barrie, Ontario, Canada</h3>
+        <p>May 2024 - Dec 2024</p>
+    </div>
+    <div class="education-card">
+        <h3>PGDM In Internet of Things and Machine Intelligence | Sheridan College, Brampton, Ontario, Canada</h3>
+        <p>May 2023 - Dec 2023</p>
+    </div>
+    <div class="education-card">
+        <h3>Bachelor in Computer Application | Calicut University, Calicut, India</h3>
+        <p>June 2019 - March 2022</p>
+    </div>
 </section>
 
 <section id="skills">
@@ -153,27 +152,27 @@ li { margin-bottom:6px; line-height:1.4; }
     <h2>Projects</h2>
     <div class="project-card">
         <h3>Network Vulnerability Assessment (OpenVAS)</h3>
-        <p>Scanned enterprise network, assessed risks, and proposed remediation strategies aligned with NIST standards.</p>
+        <p>Scanned a simulated enterprise network to identify vulnerabilities, analyzed risks, and proposed remediation strategies aligned with NIST standards.</p>
     </div>
     <div class="project-card">
         <h3>Web Application Security Testing (OWASP Juice Shop)</h3>
-        <p>Penetration testing for OWASP Top 10 vulnerabilities and mitigation strategies.</p>
+        <p>Conducted penetration testing to exploit OWASP Top 10 vulnerabilities; provided mitigation and secure coding recommendations.</p>
     </div>
     <div class="project-card">
         <h3>Log Analysis & Threat Detection (Splunk)</h3>
-        <p>Configured dashboards and alerts to detect suspicious activity.</p>
+        <p>Configured Splunk to analyze logs, create dashboards, and generate alerts for suspicious activity and unauthorized access.</p>
     </div>
     <div class="project-card">
         <h3>File Integrity Monitoring (Python)</h3>
-        <p>Developed SHA-256 based File Integrity Checker with automated alerts.</p>
+        <p>Developed a Python tool using SHA-256 to detect unauthorized file changes and automate alerts.</p>
     </div>
     <div class="project-card">
         <h3>Active Directory Security Lab</h3>
-        <p>Built AD environment with Group Policies, password rules, and least-privilege access.</p>
+        <p>Built an AD environment, implemented Group Policies, password rules, and access controls following least privilege principles.</p>
     </div>
     <div class="project-card">
-        <h3>Honeypot Deployment</h3>
-        <p>Deployed Cowrie honeypot to monitor attacker behavior and log intrusion attempts.</p>
+        <h3>Honeypot Deployment (Cowrie)</h3>
+        <p>Deployed a honeypot to monitor attacker behavior, capturing IPs, commands, and payloads for threat intelligence.</p>
     </div>
 </section>
 
